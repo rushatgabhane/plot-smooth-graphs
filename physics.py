@@ -14,5 +14,6 @@ x = np.linspace(X.min(), X.max(), smooth_factor)
 # Smmooothens the curve using spline
 smooth = spline(X, Y, x)
 plt.plot(x, smooth)
+plt.plot(X, Y, '.')
 plt.tight_layout()
 plt.show()
