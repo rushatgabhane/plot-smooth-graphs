@@ -11,9 +11,12 @@ Y = np.array([26, 25, 24, 25, 26, 27])
 smooth_factor = 250
 x = np.linspace(X.min(), X.max(), smooth_factor)
 
-# Smmooothens the curve using spline
+fig = plt.figure()
+fig.suptitle('Water', fontsize=12, color="black")
+plt.xlabel('Angle of Incidence', fontsize=11, color="black")
+plt.ylabel('Angle of Deviation', fontsize=11, color="black")
+
 smooth = spline(X, Y, x)
-plt.plot(x, smooth)
-plt.plot(X, Y, '.')
-plt.tight_layout()
+plt.plot(x, smooth, color="#0ba3ef")
+plt.plot(X, Y, '.', color="red")
 plt.show()
