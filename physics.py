@@ -16,6 +16,7 @@ fig.suptitle('Water', fontsize=12, color="black")
 plt.xlabel('Angle of Incidence', fontsize=11, color="black")
 plt.ylabel('Angle of Deviation', fontsize=11, color="black")
 
+# Remove spline if you just want the point to be plotted
 smooth = spline(X, Y, x)
 plt.plot(x, smooth, color="#0ba3ef")
 plt.plot(X, Y, '.', color="red")
